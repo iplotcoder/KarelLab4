@@ -39,15 +39,15 @@ public class Problem2 extends Problem1
             uTurn();
             nextWall();
         }
-        else {
+        else if (!nextToABeeper()) {
             nextWall();
         }
     }
     
     public void nextWall()  {
         turnLeft();
-        putBeeper();
-        if (frontIsClear()&&!nextToABeeper()) {
+        if (frontIsClear()) {
+            putBeeper();
             move();
             turnRight();
             checkWalls();

@@ -19,11 +19,11 @@ public class Problem3 extends Problem1
     }
     
     public void checkWalls()  {
-        if (frontIsClear()) {
+        if (frontIsClear()&&(!nextToABeeper())) {
             putBeeper();
             nextWall();
         }
-        else {
+        else if (!nextToABeeper()){
             nextWall();
         }
     }
